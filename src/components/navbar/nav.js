@@ -1,44 +1,32 @@
-import { FaBars } from 'react-icons/fa'
-import styled from 'styled-components'
-import { NavLink as Link } from 'react-router-dom'
-export const PrimaryNav = styled.nav`
-  z-index: 14;
-  height: 90px;
-  display: flex;
-  background: #8bc34a;
-  justify-content: space-between;
-  padding: 0.18rem calc((100vw - 1000px) / 2);
-`
-export const MenuLink = styled(Link)`
-  color: #fff;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1.2rem;
-  height: 100%;
-  &.active {
-    color: #000000;
-  }
-`
-export const Hamburger = styled(FaBars)`
-  display: none;
-  color: #ffffff;
-  @media screen and (max-width: 768px) {
-    display: block;
-    font-size: 1.9rem;
-    top: 0;
-    right: 0;
-    position: absolute;
-    cursor: pointer;
-    transform: translate(-100%, 75%);
-  }
-`
-export const Menu = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: -25px;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`
+import React from "react";
+
+const Navbar = () => {
+    return (
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" />
+                    <button class="btn btn-outline-success my- my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    )
+}
+
+export default Navbar

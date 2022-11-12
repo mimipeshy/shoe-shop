@@ -1,12 +1,14 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/navbar/nav';
 
-const App= ()=>{
-  return(
+const App = () => {
+  return (
     <div>
-      Taita BabyShop
+      <Navbar/>
     </div>
-  )
-  
+ )
+
 }
 
 export default App;
